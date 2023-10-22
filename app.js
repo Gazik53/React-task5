@@ -76,5 +76,10 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+const app = <>
+  <showMovies />
+  <addEventListene />
+</>
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<NameForm />);
+root.render(app);
