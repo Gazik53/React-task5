@@ -76,3 +76,5 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<NameForm />);
