@@ -47,16 +47,15 @@ function showMovies(data) {
       <div class="movie__info">
         <div class="movie__title">${movie.nameRu}</div>
         <div class="movie__category">${movie.genres.map(
-          (genre) => ` ${genre.genre}`
-        )}</div>
-        ${
-          movie.rating &&
-          `
+      (genre) => ` ${genre.genre}`
+    )}</div>
+        ${movie.rating &&
+      `
         <div class="movie__average movie__average--${getClassByRate(
-          movie.rating
-        )}">${movie.rating}</div>
+        movie.rating
+      )}">${movie.rating}</div>
         `
-        }
+      }
       </div>
         `;
     moviesEl.appendChild(movieEl);
@@ -77,5 +76,3 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<NameForm />);
